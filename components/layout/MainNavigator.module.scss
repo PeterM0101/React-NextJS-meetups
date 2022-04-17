@@ -1,0 +1,31 @@
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #631B29;
+    color: white;
+    padding: 0 7% 0 5%;
+    .logo {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    nav {
+        width: 70%;
+        font-size: 1.5rem;
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+            padding: 0;
+            li {
+                margin-right: 2rem;
+                &.active a,
+                a:hover {
+                    color: rgb(203, 101, 118);   
+                }
+            }
+        }
+    }
+}

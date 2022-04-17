@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+    // width: 50%;
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        .image {
+            height: 300px;
+            width: 100%;
+            position: relative;
+        }
+        .content {
+            text-align: center;
+            & * {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

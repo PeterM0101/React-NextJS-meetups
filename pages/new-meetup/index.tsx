@@ -19,9 +19,6 @@ const NewMeetupPage = () => {
     });
 
     const data = response.json();
-    console.log('data: ', data);
-    
-    console.log('newMeetup: ',newMeetup);
     
   }
 

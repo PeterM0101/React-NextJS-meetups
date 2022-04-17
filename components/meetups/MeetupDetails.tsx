@@ -7,10 +7,10 @@ type Props = {
   title: string, 
   description: string, 
   address: string,
-  id: string
+  id?: string
 }
 
-const MeetupDetails: FC<Props> = ({image, title, description, address, id}) => {
+const MeetupDetails: FC<Props> = ({image, title, description, address}) => {
   
   return (
     <div className={styles['meetup-details']}>

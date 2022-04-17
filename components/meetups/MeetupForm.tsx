@@ -18,12 +18,12 @@ const MeetupForm: FC<Props> = ({onAddMeetup}) => {
     const submitHandler = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const newMeetup: MeetupInterface = {
+        const newMeetup: any = {
             title: titleRef.current!.value,
             image: imageRef.current!.value,
             address: addressRef.current!.value,
             description: descriptionRef.current!.value,
-            id: new Date().toISOString()
+            // id: new Date().toISOString()
         }
 
         onAddMeetup(newMeetup);   

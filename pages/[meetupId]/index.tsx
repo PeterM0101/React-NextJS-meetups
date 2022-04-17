@@ -67,14 +67,10 @@ export const getStaticProps: GetStaticProps  = async (contex) => {
 
   const meetupId = contex?.params?.meetupId;
 
-  console.log('meetupId: ', meetupId);
-
   const client = await MongoClient.connect('mongodb+srv://Petro:5pp9e5wd@cluster0.mackx.mongodb.net/meetups?retryWrites=true&w=majority');
   const db = client.db();
   const meetupsCollection = db.collection('meetups');
   const meetup: any = await meetupsCollection.findOne({_id: new ObjectId(meetupId as string)});
-
-  console.log('meetup: ', meetup);
   
   client.close();
   const {title, address, image, description, _id} = meetup;

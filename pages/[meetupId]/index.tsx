@@ -11,9 +11,7 @@ type Props = {
 }
 
 const MeetupInfo: FC<Props> = ({meetupData: {image, description, title, address, id}}) => {
-  const router = useRouter();
-  // const id = router?.query?.meetupId ? router.query.meetupId : '';
-  
+  const router = useRouter(); 
 
   return (
     <>
@@ -60,7 +58,7 @@ export async function getStaticPaths() {
     { 
       // paths: ['/m1', '/m2','/m3'], 
       paths,
-      fallback: false 
+      fallback: 'blocking' 
     }
   )
 }

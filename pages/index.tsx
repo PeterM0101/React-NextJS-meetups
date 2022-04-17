@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb'
-import type { GetServerSideProps, NextPage } from 'next'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import MeetupList from '../components/meetups/MeetupList'
 import styles from '../styles/Home.module.css'
@@ -12,29 +12,29 @@ export interface MeetupInterface {
   description: string  
 }
 
-const DUMMY_MEETUPS: MeetupInterface[] = [
-  {
-    id: 'm1',
-    title: 'A first meetup',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'some addres: 5 123',
-    description: 'This is the first meetup!'
-  },
-  {
-    id: 'm2',
-    title: 'A second meetup',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'some addres: 5 123',
-    description: 'This is the second meetup!'
-  },
-  {
-    id: 'm3',
-    title: 'A third meetup',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
-    address: 'some addres: 5 123',
-    description: 'This is the third meetup!'
-  },
-]
+// const DUMMY_MEETUPS: MeetupInterface[] = [
+//   {
+//     id: 'm1',
+//     title: 'A first meetup',
+//     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
+//     address: 'some addres: 5 123',
+//     description: 'This is the first meetup!'
+//   },
+//   {
+//     id: 'm2',
+//     title: 'A second meetup',
+//     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
+//     address: 'some addres: 5 123',
+//     description: 'This is the second meetup!'
+//   },
+//   {
+//     id: 'm3',
+//     title: 'A third meetup',
+//     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg',
+//     address: 'some addres: 5 123',
+//     description: 'This is the third meetup!'
+//   },
+// ]
 
 type Props = {
   meetups: MeetupInterface[]

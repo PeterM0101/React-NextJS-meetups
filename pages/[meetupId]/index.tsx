@@ -2,9 +2,10 @@ import { MongoClient, ObjectId } from 'mongodb'
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { FC } from 'react'
+import React, { FC, useContext } from 'react'
 import { MeetupInterface } from '..'
 import MeetupDetails from '../../components/meetups/MeetupDetails'
+import { IsLoadingContext } from '../../components/store/isLoadingContext'
 
 type Props = {
   meetupData: MeetupInterface
@@ -12,6 +13,7 @@ type Props = {
 
 const MeetupInfo: FC<Props> = ({meetupData: {image, description, title, address, id}}) => {
   const router = useRouter(); 
+  const {setIsLoading} = useContext(IsLoadingContext);
 
   return (
     <>

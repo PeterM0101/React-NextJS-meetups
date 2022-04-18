@@ -1,8 +1,8 @@
 .form-container {
     margin-top: 2rem;
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     form {
-        // max-width: 600px;
         display: flex;
         flex-direction: column;
         padding: 1.5rem;

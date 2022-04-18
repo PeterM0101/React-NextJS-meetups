@@ -2,7 +2,6 @@ import { MongoClient } from 'mongodb'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import MeetupList from '../components/meetups/MeetupList'
-import styles from '../styles/Home.module.css'
 
 export interface MeetupInterface {
   id: string,
@@ -42,7 +41,7 @@ type Props = {
 
 const HomePage: NextPage<Props> = ({meetups}) => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>React meetups</title>
         <meta 
@@ -50,7 +49,7 @@ const HomePage: NextPage<Props> = ({meetups}) => {
           content='Briliant React meetups'/>
       </Head>
       <MeetupList meetups = {meetups}/>
-    </div>
+    </>
   )
 }
 

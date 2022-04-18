@@ -1,5 +1,11 @@
-
-.main {
+.container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .main {
+        width: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
 }

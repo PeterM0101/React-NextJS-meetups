@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Layout: FC<Props> = ({children}) => {
-  const {isLoading} = useContext(IsLoadingContext)
+  const {isLoading} = useContext(IsLoadingContext);
   return (
     <div className={styles.container}>
         {isLoading && <Spinner />}
